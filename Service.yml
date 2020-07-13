@@ -1,0 +1,322 @@
+openapi: '3.0.2'
+info:
+  title: Payment Concept
+  description: This service allows for control of the system's Payment Concept
+  version: "1.0"
+  contact:
+    name: Juan Alexis Luque Ayala
+    email: juan.luque.ayala@gmail.com
+servers:
+  - url:  https://link.herokuapp.com/
+
+tags:
+  - name: PaymentConcept
+    description: Everything about PaymentConcept
+
+        
+paths:
+  #Modulo de PaymentConcepts
+  /PaymentConcepts:
+    get:
+      tags:
+        - PaymentConcept    
+      summary: Find all PaymentConcepts
+      operationId: listPaymentConcepts
+      responses:            
+        '200':
+          $ref: components/responses/responses.yml#/ShowPaymentConcepts         
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+          
+          
+    post:
+      tags:
+        - PaymentConcept    
+      summary: Add a new PaymentConcept to the system
+      operationId: addPaymentConcept
+      requestBody:
+        description: PaymentConcept to add to the system
+        content:
+          multipart/formData:
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/PaymentConceptPayload
+      responses:      
+        '201':
+          $ref: components/responses/responses.yml#/CreatedPaymentConcept         
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+        '422':
+          $ref: components/responses/responses.yml#/UnprocessableEntity 
+
+    
+
+  /PaymentConcepts/{id}:
+    get:
+      tags:
+        - PaymentConcept
+      summary: Find an PaymentConcept
+      operationId: findPaymentConcept
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowPaymentConcept      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+    put: 
+      tags:
+        - PaymentConcept
+      summary: Update an existing PaymentConcept
+      operationId: updatePaymentConcept
+      parameters: 
+        - $ref: components/parameters/parameters.yml#/id
+      requestBody:
+        description: PaymentConcept to update to the system
+        content:
+          multipart/form-data:
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/PaymentConceptPayload
+      responses:
+        '201':
+          $ref: components/responses/responses.yml#/CreatedPaymentConcept     
+        '404':           
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+        '422':
+          $ref: components/responses/responses.yml#/UnprocessableEntity           
+
+    delete:
+      tags:
+        - PaymentConcept
+      summary: Delete an existing PaymentConcept
+      operationId: deletePaymentConcept
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/DeletePaymentConcept      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+
+  /PaymentConcepts/pagination:
+    get:
+      tags:
+        - PaymentConcept
+      summary: Recover a certain number of PaymentConcepts per page
+      operationId: pagPaymentConcept
+      parameters:
+        - $ref: components/parameters/parameters.yml#/page
+        - $ref: components/parameters/parameters.yml#/limit
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowPaymentConceptsPerPage      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
+
+
+  /PaymentConcepts/search:
+    get:
+      tags:
+        - PaymentConcept
+      summary: Search of PaymentConcepts for certain parameter
+      operationId: searchPaymentConcept
+      parameters:
+        - $ref: components/parameters/parameters.yml#/page
+        - $ref: components/parameters/parameters.yml#/limit
+        - $ref: components/parameters/parameters.yml#/dni
+        - $ref: components/parameters/parameters.yml#/name
+        - $ref: components/parameters/parameters.yml#/surname
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/SearchPaymentConceptsPerPage      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
+
+#Modulo de Applicant
+  /applicants:
+    get:
+      tags:
+        - Applicant    
+      summary: Find all applicants
+      operationId: listApplicants
+      responses:            
+        '200':
+          $ref: components/responses/responses.yml#/ShowApplicants          
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+          
+          
+    post:
+      tags:
+        - Applicant    
+      summary: Add a new applicant to the system
+      operationId: addApplicant
+      requestBody:
+        description: Applicant to add to the system
+        content:
+          multipart/formData:
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/ApplicantPayload
+      responses:      
+        '201':
+          $ref: components/responses/responses.yml#/CreatedApplicant          
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+        '422':
+          $ref: components/responses/responses.yml#/UnprocessableEntity 
+
+  /applicants/{id}:
+    get:
+      tags:
+        - Applicant
+      summary: Find an applicant
+      operationId: findApplicant
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowApplicant      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+    put: 
+      tags:
+        - Applicant
+      summary: Update an existing applicant
+      operationId: updateApplicant
+      parameters: 
+        - $ref: components/parameters/parameters.yml#/id
+      requestBody:
+        description: Applicant to update to the system
+        content:
+          multipart/formData:
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/ApplicantPayload
+      responses:
+        '201':
+          $ref: components/responses/responses.yml#/CreatedApplicant    
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+        '422':
+          $ref: components/responses/responses.yml#/UnprocessableEntity           
+
+    delete:
+      tags:
+        - Applicant
+      summary: Delete an existing applicant
+      operationId: deleteApplicant
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/DeleteApplicant      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+        '422':
+          $ref: components/responses/responses.yml#/UnprocessableEntity 
+
+  /applicants/pagination:
+    get:
+      tags:
+        - Applicant
+      summary: Recover a certain number of applicants per page
+      operationId: pagApplicant
+      parameters:
+        - $ref: components/parameters/parameters.yml#/page
+        - $ref: components/parameters/parameters.yml#/limit
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowApplicantsPerPage      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
+
+
+  /applicants/search:
+    get:
+      tags:
+        - Applicant
+      summary: Search of applicants for certain parameter
+      operationId: searchApplicant
+      parameters:
+        - $ref: components/parameters/parameters.yml#/page
+        - $ref: components/parameters/parameters.yml#/limit
+        - $ref: components/parameters/parameters.yml#/dni
+        - $ref: components/parameters/parameters.yml#/name
+        - $ref: components/parameters/parameters.yml#/surname
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/SearchApplicantsPerPage      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
+        
+          
+
+# Aplicar la API key globalmente a todas las operaciones 
+security:
+  - Authorization: [PDQFWb29LPWcf0gsUJpeZksVjUSf7Jnc]
+            
+
+components:
+  # SECURITY
+  # Contiene todos los tipos de seguridad para el uso del servicio  
+  securitySchemes:
+    # AUTHORIZATION:
+    # Permite el uso del servicio mediante el registro de una api key enviado en el header
+    # con el nombre Authorization, por ejemplo: Authorization EJm9IExSA9rv3N9uCVfIhNRdNOMUSe8w
+    # estas cadenas serán colocadas en el archivo de configuración del servicio y restringido mediante un middleware
+    Authorization:
+      type: apiKey
+      name: Authorization
+      in: header 

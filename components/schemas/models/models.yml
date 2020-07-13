@@ -1,0 +1,44 @@
+ # SCHEMA MODEL
+  # Este tipo de esquema representa a la entidad del modelo en nuestra aplicación
+  # Por ejemplo en el servicio: ServicePeople tenemos 2 modelos 
+    # PaymentConcept: Es el esquema del modelo PaymentConcept el cual contiene sus atributos y un ejemplo  
+    PaymentConcept:
+      type: object
+      properties:
+        id:
+          type: integer 
+        concept:
+          type: string          
+        amount:
+          type: float
+        description:
+          type: string             
+        created_at: 
+          type: string       
+        updated_at:
+          type: string
+      example:
+        id: 1
+        concept: "194-418"       
+        amount: 60.00
+        description: "Pago Aportes Laboratorio"        
+        created_at: "2020-04-16 07:35:08"
+        updated_at: "2020-04-16 07:35:08"
+
+    #PaymentConceptDeleted: Es el esquema del modelo que retorna una consulta por eliminar un empleado el cual contiene sus atributos y un ejemplo  
+    PaymentConceptDeleted:
+      type: object
+      properties:
+        id:
+          type: integer 
+        dni:
+          type: string  
+        names:
+          type: string         
+        surname:
+          type: string  
+      example:
+        id: 1
+        dni: "72959687"       
+        names: "Ivan Miguel"        
+        surname: "Suarez Torres"

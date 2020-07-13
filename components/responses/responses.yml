@@ -1,0 +1,137 @@
+# RESPONSES
+  # Contiene todos los tipos de respuestas específicas de una petición http
+  # Por ejemplo dentro de las operaciones basicas de un CRUD para una petición de tipo post para registrar un recurso
+  # tenemos respuestas de errores específicas indicando su código y la respuesta de exito correspondiente al registro
+  # el cual es CreatedPaymentConcept -> Esta respuesta tiene como contenido un scheme de tipo CreatedResponse, el cual contiene 
+  # la estructura de la respuesta luego de que se realiza un registro  
+    ## Respuestas de error específicas 
+  
+    NotFound: 
+      description: The specified resource was not found
+      content: 
+        application/json: 
+          schema: 
+            $ref: ../schemas/responses/error.yml#/NotFoundResponse
+        
+    MethodNotAllowed:
+      description: The method used is not allowed
+      content:
+        application/json:
+          schema:            
+            $ref: ../schemas/responses/error.yml#/MethodNotAllowedResponse            
+
+    UnprocessableEntity:
+      description: The request was well-formed but was unable to be followed due to semantic errors
+      content:
+        application/json:
+          schema:            
+            $ref: ../schemas/responses/error.yml#/UnprocessableEntityResponse            
+
+    Unauthenticated:
+      description: You have no permission to access  
+      content: 
+        application/json:
+          schema:            
+            $ref: ../schemas/responses/error.yml#/UnauthenticatedResponse            
+
+  
+    ## Respuestas de éxito específicas para Empleados
+    CreatedPaymentConcept:
+      description: The resource has been successfully created
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/CreatedPaymentConceptResponse                        
+    
+    ShowPaymentConcepts: 
+      description: Show all PaymentConcepts
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowPaymentConceptsResponse                                                   
+          example: 
+            $ref: ../../examples/PaymentConcepts.json
+
+    ShowPaymentConceptsPerPage: 
+      description: Show certain amount of PaymentConcepts per page 
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowPaymentConceptsPerPageResponse                                                   
+          example: 
+            $ref: ../../examples/PaymentConceptsPerPage.json
+
+    SearchPaymentConceptsPerPage: 
+      description: Show certain amount of PaymentConcepts searched for field dni,name or surname per page 
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowPaymentConceptsPerPageResponse                                                   
+          example: 
+            $ref: ../../examples/PaymentConceptsPerPage.json
+    
+    ShowPaymentConcept:
+      description: Show one PaymentConcept 
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowPaymentConceptResponse                                                                
+
+    DeletePaymentConcept:
+      description: Delete one PaymentConcept 
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowDeletePaymentConceptResponse 
+
+    ## Respuestas de exito específicas para Solicitantes
+    CreatedApplicant:
+      description: The resource has been successfully created
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/CreatedApplicantResponse  
+                          
+    
+    ShowApplicants: 
+      description: Show all Applicants
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/SuccessfulResponse                                                    
+          example: 
+            $ref: ../../examples/Applicants.json
+
+    ShowApplicantsPerPage: 
+      description: Show certain amount of Applicants per page 
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowApplicantsPerPageResponse                                                   
+          example: 
+            $ref: ../../examples/ApplicantsPerPage.json
+
+    SearchApplicantsPerPage: 
+      description: Show certain amount of Applicants searched for field dni,name or surname per page 
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowApplicantsPerPageResponse                                                   
+          example: 
+            $ref: ../../examples/ApplicantsPerPage.json
+    
+    ShowApplicant:
+      description: Show one Applicant 
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowApplicantResponse    
+
+    DeleteApplicant:
+      description: Delete one Applicant 
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowDeleteApplicantResponse
+                                                                               
+    

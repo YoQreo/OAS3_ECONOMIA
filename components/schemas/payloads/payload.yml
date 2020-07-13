@@ -1,0 +1,97 @@
+#PAYLOAD SCHEME
+  #Este esquema contiene la estructura de un request body Employee
+    EmployeePayload:
+      type: object
+      properties:
+        id:
+          type: integer 
+        dni:
+          type: string          
+        code:
+          type: string
+        names:
+          type: string         
+        surname:
+          type: string
+        profile_id:
+          type: integer 
+        date_of_birth:
+          type: string          
+        gender:
+          type: string
+        phone:
+          type: string   
+        mobile:
+          type: string     
+        address:
+          type: string
+        email:
+          type: string  
+        photo:
+          type: string                                
+      example:           
+          id: 1
+          dni: "72959687"       
+          code: "16200378"
+          names: "Ivan Miguel"        
+          surname: "Suarez Torres"
+          profile_id: 1
+          date_of_birth: "1990-04-16"       
+          gender: "M"
+          phone: "3660516" 
+          mobile: "930129013"     
+          address: "Jr. Union Block A 234"
+          email: "suareztorresivan@hotmail.com"
+          photo: "http://placehold.it/32x32"
+  #Este esquema contiene la estructura de un request body Aplicant
+    ApplicantPayload:
+      type: object
+      properties:        
+        id:
+          type: integer 
+        dni:
+          type: string
+        names:
+          type: string         
+        surname:
+          type: string
+        type:
+          type: string
+        gender:
+          type: string
+        institutional_email:
+          type: string
+        photo:
+          type: string 
+        code :
+          type: string  
+        school_id :
+          type: integer       
+        phone:
+          type: string    
+        mobile:
+          type: string 
+        personal_email:
+          type: string   
+        address:
+          type: string
+        description:
+          type: string                                           
+      example:           
+          id: 1
+          dni: "72959687"
+          names: "Ivana Vanesa"        
+          surname: "Montes Jimenez"
+          type: "Posgrado"
+          gender: "F"
+          institutional_email: "ivanamontes@unmsm.edu.pe"
+          photo: "photo.jpg"
+          code: "16200357"
+          school_id: 4
+          phone: "5893640"
+          mobile: "930459761" 
+          personal_email: "montesjimenez@gmail.com"    
+          address: "Jr. Los Olivos Block Z 234"
+          description: "El alumno se encuentra con Beca 18"
+          
+          
