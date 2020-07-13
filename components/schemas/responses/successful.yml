@@ -30,7 +30,23 @@
           example: 201
         type:
           type: string
-          example: S004  
+          example: S004 
+
+    UpdatedPaymentConceptResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties:
+        data:           
+          $ref: ../models/models.yml#/PaymentConcept
+        code: 
+          type: integer   
+          example: 201
+        type:
+          type: string
+          example: S005   
 
     ShowDeletePaymentConceptResponse:
       type: object
@@ -47,22 +63,6 @@
         type:
           type: string
           example: S003      
-    
-    ShowPaymentConceptResponse:
-      type: object
-      required:
-        - data
-        - code
-        - type
-      properties: 
-        data:
-          $ref: ../models/models.yml#/PaymentConcept
-        code:
-          type: integer
-          example: 200
-        type:
-          type: string
-          example: S001
 
     ShowPaymentConceptsResponse:
       type: object
@@ -79,100 +79,3 @@
         type:
           type: string
           example: S002
-
-    ShowPaymentConceptsPerPageResponse:
-      type: object
-      required:
-        - data
-        - code
-        - type
-      properties: 
-        data:
-          $ref: ../models/models.yml#/PaymentConceptsPerPage
-        code:
-          type: integer
-          example: 200
-        type:
-          type: string
-          example: S002
-
-      
-      # CreatedResponse para Applicant: Esquema de la respuesta de exito CreatedResponse el cual contiene un ejemplo
-    CreatedApplicantResponse:
-      type: object
-      required:
-        - data
-        - code
-        - type
-      properties:
-        data:           
-          $ref: ../models/models.yml#/Applicant
-        code: 
-          type: integer   
-          example: 201 
-        type:
-          type: string
-          example: S004 
-    
-    ShowDeleteApplicantResponse:
-      type: object
-      required:
-        - data
-        - code
-        - type
-      properties: 
-        data:
-          $ref: ../models/models.yml#/ApplicantDeleted
-        code:
-          type: integer
-          example: 200
-        type:
-          type: string
-          example: S003
-          
-    ShowApplicantResponse:
-      type: object
-      required:
-        - data
-        - code
-      properties: 
-        data:
-          $ref: ../models/models.yml#/Applicant
-        code:
-          type: integer
-          example: 200
-        type:
-          type: string
-          example: S001
-
-    ShowApplicantsResponse:
-      type: object
-      required:
-        - data
-        - code
-      properties: 
-        data:
-          $ref: ../models/models.yml#/Applicant
-        code:
-          type: integer
-          example: 200
-        type:
-          type: string
-          example: S002
-
-    ShowApplicantsPerPageResponse:
-      type: object
-      required:
-        - data
-        - code
-        - type
-      properties: 
-        data:
-          $ref: ../models/models.yml#/ApplicantsPerPage
-        code:
-          type: integer
-          example: 200
-        type:
-          type: string
-          example: S002
-

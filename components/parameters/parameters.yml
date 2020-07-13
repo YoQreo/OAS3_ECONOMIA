@@ -3,53 +3,14 @@
   #Contiene todos los parámetros que serán utilizados en una petición http ya sea que sea enviado
   #por el header, path, query o cache  
   # parameters:
-    id:
+    payment_concept_id:
       name: id
       in: path
       required: true
-      description: People id
+      description: PaymentConcept id
       schema:
         type: integer 
 
-    page:
-      name: page
-      in: query
-      required: false
-      description: The number of page
-      schema:
-        type: integer 
-        
-    limit:
-      name: limit
-      in: query
-      required: false
-      description: The numbers of items max to return for page
-      schema:
-        type: integer 
-
-    dni:
-      name: dni
-      in: query
-      required: false
-      description: Document to identify to person
-      schema:
-        type: integer 
-
-    name:
-      name: name
-      in: query
-      required: false
-      description: Name of person
-      schema:
-        type: string
-
-    surname:
-      name: surname
-      in: query
-      required: false
-      description: Surname of person
-      schema:
-        type: string
 
    
     

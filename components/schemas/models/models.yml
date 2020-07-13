@@ -19,7 +19,7 @@
           type: string
       example:
         id: 1
-        concept: "194-418"       
+        concept: "191-418"       
         amount: 60.00
         description: "Pago Aportes Laboratorio"        
         created_at: "2020-04-16 07:35:08"
@@ -31,14 +31,8 @@
       properties:
         id:
           type: integer 
-        dni:
-          type: string  
-        names:
-          type: string         
-        surname:
-          type: string  
+        description:
+          type: string   
       example:
         id: 1
-        dni: "72959687"       
-        names: "Ivan Miguel"        
-        surname: "Suarez Torres"
+        description: "Pago Aportes Laboratorio"      

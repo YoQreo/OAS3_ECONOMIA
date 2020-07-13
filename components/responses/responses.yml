@@ -41,7 +41,14 @@
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/CreatedPaymentConceptResponse                        
+            $ref: ../schemas/responses/successful.yml#/CreatedPaymentConceptResponse   
+
+    UpdatedPaymentConcept:
+      description: The resource has been successfully updated
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/UpdatedPaymentConceptResponse                   
     
     ShowPaymentConcepts: 
       description: Show all PaymentConcepts
@@ -50,32 +57,7 @@
           schema:
             $ref: ../schemas/responses/successful.yml#/ShowPaymentConceptsResponse                                                   
           example: 
-            $ref: ../../examples/PaymentConcepts.json
-
-    ShowPaymentConceptsPerPage: 
-      description: Show certain amount of PaymentConcepts per page 
-      content:
-        application/json:
-          schema:
-            $ref: ../schemas/responses/successful.yml#/ShowPaymentConceptsPerPageResponse                                                   
-          example: 
-            $ref: ../../examples/PaymentConceptsPerPage.json
-
-    SearchPaymentConceptsPerPage: 
-      description: Show certain amount of PaymentConcepts searched for field dni,name or surname per page 
-      content:
-        application/json:
-          schema:
-            $ref: ../schemas/responses/successful.yml#/ShowPaymentConceptsPerPageResponse                                                   
-          example: 
-            $ref: ../../examples/PaymentConceptsPerPage.json
-    
-    ShowPaymentConcept:
-      description: Show one PaymentConcept 
-      content: 
-        application/json:
-          schema:
-            $ref: ../schemas/responses/successful.yml#/ShowPaymentConceptResponse                                                                
+            $ref: ../../examples/PaymentConcepts.json                                                            
 
     DeletePaymentConcept:
       description: Delete one PaymentConcept 
@@ -83,55 +65,3 @@
         application/json:
           schema:
             $ref: ../schemas/responses/successful.yml#/ShowDeletePaymentConceptResponse 
-
-    ## Respuestas de exito específicas para Solicitantes
-    CreatedApplicant:
-      description: The resource has been successfully created
-      content: 
-        application/json:
-          schema:
-            $ref: ../schemas/responses/successful.yml#/CreatedApplicantResponse  
-                          
-    
-    ShowApplicants: 
-      description: Show all Applicants
-      content:
-        application/json:
-          schema:
-            $ref: ../schemas/responses/successful.yml#/SuccessfulResponse                                                    
-          example: 
-            $ref: ../../examples/Applicants.json
-
-    ShowApplicantsPerPage: 
-      description: Show certain amount of Applicants per page 
-      content:
-        application/json:
-          schema:
-            $ref: ../schemas/responses/successful.yml#/ShowApplicantsPerPageResponse                                                   
-          example: 
-            $ref: ../../examples/ApplicantsPerPage.json
-
-    SearchApplicantsPerPage: 
-      description: Show certain amount of Applicants searched for field dni,name or surname per page 
-      content:
-        application/json:
-          schema:
-            $ref: ../schemas/responses/successful.yml#/ShowApplicantsPerPageResponse                                                   
-          example: 
-            $ref: ../../examples/ApplicantsPerPage.json
-    
-    ShowApplicant:
-      description: Show one Applicant 
-      content: 
-        application/json:
-          schema:
-            $ref: ../schemas/responses/successful.yml#/ShowApplicantResponse    
-
-    DeleteApplicant:
-      description: Delete one Applicant 
-      content: 
-        application/json:
-          schema:
-            $ref: ../schemas/responses/successful.yml#/ShowDeleteApplicantResponse
-                                                                               
-    
