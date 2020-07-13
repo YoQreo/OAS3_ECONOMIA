@@ -10,21 +10,21 @@ servers:
   - url:  https://link.herokuapp.com/
 
 tags:
-  - name: PaymentConcept
-    description: Everything about PaymentConcept
+  - name: Concept
+    description: Everything about Concept
 
         
 paths:
-  #Modulo de PaymentConcepts
-  /paymentConcepts:
+  #Modulo de Concepts
+  /concepts:
     get:
       tags:
-        - PaymentConcept    
-      summary: Find all paymentConcepts
-      operationId: listPaymentConcepts
+        - Concept    
+      summary: Find all Concepts
+      operationId: listConcepts
       responses:            
         '200':
-          $ref: components/responses/responses.yml#/ShowPaymentConcepts         
+          $ref: components/responses/responses.yml#/ShowConcepts         
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -35,18 +35,18 @@ paths:
           
     post:
       tags:
-        - PaymentConcept    
-      summary: Add a new paymentConcept to the system
-      operationId: addPaymentConcept
+        - Concept    
+      summary: Add a new Concept to the system
+      operationId: addConcept
       requestBody:
-        description: PaymentConcept to add to the system
+        description: Concept to add to the system
         content:
           application/json:
             schema:
-              $ref: components/schemas/payloads/payload.yml#/PaymentConceptPayload
+              $ref: components/schemas/payloads/payload.yml#/ConceptPayload
       responses:      
         '201':
-          $ref: components/responses/responses.yml#/CreatedPaymentConcept         
+          $ref: components/responses/responses.yml#/CreatedConcept         
         '405':
           $ref: components/responses/responses.yml#/MethodNotAllowed           
         '401':
@@ -56,23 +56,23 @@ paths:
 
     
 
-  /paymentConcepts/{id}:
+  /concepts/{id}:
     put: 
       tags:
-        - PaymentConcept
-      summary: Update an existing paymentConcept
-      operationId: updatePaymentConcept
+        - Concept
+      summary: Update an existing Concept
+      operationId: updateConcept
       parameters: 
-        - $ref: components/parameters/parameters.yml#/payment_concept_id
+        - $ref: components/parameters/parameters.yml#/concept_id
       requestBody:
-        description: PaymentConcept to update to the system
+        description: Concept to update to the system
         content:
           application/json:
             schema:
-              $ref: components/schemas/payloads/payload.yml#/PaymentConceptPayload
+              $ref: components/schemas/payloads/payload.yml#/ConceptPayload
       responses:
         '201':
-          $ref: components/responses/responses.yml#/UpdatedPaymentConcept    
+          $ref: components/responses/responses.yml#/UpdatedConcept    
         '404':           
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -84,14 +84,14 @@ paths:
 
     delete:
       tags:
-        - PaymentConcept
-      summary: Delete an existing paymentConcept
-      operationId: deletePaymentConcept
+        - Concept
+      summary: Delete an existing Concept
+      operationId: deleteConcept
       parameters:
-        - $ref: components/parameters/parameters.yml#/payment_concept_id
+        - $ref: components/parameters/parameters.yml#/concept_id
       responses:
         '200':
-          $ref: components/responses/responses.yml#/DeletePaymentConcept      
+          $ref: components/responses/responses.yml#/DeleteConcept      
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':

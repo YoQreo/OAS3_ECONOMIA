@@ -1,6 +1,6 @@
 #PAYLOAD SCHEME
-  #Este esquema contiene la estructura de un request body PaymentConcept
-    PaymentConceptPayload:
+  #Este esquema contiene la estructura de un request body Concept
+    ConceptPayload:
       type: object
       properties:
         id:

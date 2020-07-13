@@ -48,9 +48,7 @@
               items:
                   type: string
           example:   
-              names:  [The names field is required.]
-              mobile: [The mobile field is required.]
-              code: [The code field is required.]
+              concept:  [The concept field is required.]
         code: 
           type: integer
           example: 422

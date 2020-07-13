@@ -3,11 +3,11 @@
   #Contiene todos los parámetros que serán utilizados en una petición http ya sea que sea enviado
   #por el header, path, query o cache  
   # parameters:
-    payment_concept_id:
+    concept_id:
       name: id
       in: path
       required: true
-      description: PaymentConcept id
+      description: Concept id
       schema:
         type: integer 
 

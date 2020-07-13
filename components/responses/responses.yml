@@ -2,7 +2,7 @@
   # Contiene todos los tipos de respuestas específicas de una petición http
   # Por ejemplo dentro de las operaciones basicas de un CRUD para una petición de tipo post para registrar un recurso
   # tenemos respuestas de errores específicas indicando su código y la respuesta de exito correspondiente al registro
-  # el cual es CreatedPaymentConcept -> Esta respuesta tiene como contenido un scheme de tipo CreatedResponse, el cual contiene 
+  # el cual es CreatedConcept -> Esta respuesta tiene como contenido un scheme de tipo CreatedResponse, el cual contiene 
   # la estructura de la respuesta luego de que se realiza un registro  
     ## Respuestas de error específicas 
   
@@ -36,32 +36,32 @@
 
   
     ## Respuestas de éxito específicas para Empleados
-    CreatedPaymentConcept:
+    CreatedConcept:
       description: The resource has been successfully created
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/CreatedPaymentConceptResponse   
+            $ref: ../schemas/responses/successful.yml#/CreatedConceptResponse   
 
-    UpdatedPaymentConcept:
+    UpdatedConcept:
       description: The resource has been successfully updated
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/UpdatedPaymentConceptResponse                   
+            $ref: ../schemas/responses/successful.yml#/UpdatedConceptResponse                   
     
-    ShowPaymentConcepts: 
-      description: Show all PaymentConcepts
+    ShowConcepts: 
+      description: Show all Concepts
       content:
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/ShowPaymentConceptsResponse                                                   
+            $ref: ../schemas/responses/successful.yml#/ShowConceptsResponse                                                   
           example: 
-            $ref: ../../examples/PaymentConcepts.json                                                            
+            $ref: ../../examples/Concepts.json                                                            
 
-    DeletePaymentConcept:
-      description: Delete one PaymentConcept 
+    DeleteConcept:
+      description: Delete one Concept 
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/ShowDeletePaymentConceptResponse 
+            $ref: ../schemas/responses/successful.yml#/ShowDeleteConceptResponse 
