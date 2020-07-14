@@ -12,7 +12,8 @@ servers:
 tags:
   - name: Concept
     description: Everything about Concept
-
+  - name: Student 
+    description: Everything about Student 
         
 paths:
   #Modulo de Concepts
@@ -98,7 +99,29 @@ paths:
           $ref: components/responses/responses.yml#/MethodNotAllowed           
         '401':
           $ref: components/responses/responses.yml#/Unauthenticated 
-          
+
+  /students/import:
+    post:
+      tags:
+        - Student
+      summary: Import students from xlsx file      
+      operationId: importStudents 
+      requestBody:
+        description: Import students 
+        content:
+          multipart/form-data: 
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/StudentImportPayload
+      responses:
+        '201':
+          $ref: components/responses/responses.yml#/ImportStudents         
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+        '422':
+          $ref: components/responses/responses.yml#/UnprocessableEntityImport 
+
 # Aplicar la API key globalmente a todas las operaciones 
 security:
   - Authorization: []

@@ -65,3 +65,39 @@
         application/json:
           schema:
             $ref: ../schemas/responses/successful.yml#/ShowDeleteConceptResponse 
+  ## Respuestas de exito especificas para Estudiantes
+    ImportStudents: 
+      description: Student records have been imported correctly
+      content:
+        application/json:
+          schema: 
+            $ref: ../schemas/responses/successful.yml#/ImportStudentsResponse
+          example:
+            $ref: ../../examples/ImportStudents.json                                                            
+
+    UnprocessableEntityImport:
+      description: The request was well-formed but was unable to be followed due to semantic errors
+      content:
+        application/json:
+          schema:            
+            type: object             
+            required: 
+                - error
+                - code
+                - type
+            properties:
+              error: 
+                type: array
+                items:
+                    type: array
+                    items:
+                        type: string
+                example:   
+                    file:  [The file does not contain the proper format.]
+              code: 
+                type: integer
+                example: 422
+              type:
+                type: string
+                example: E001
+          

@@ -79,3 +79,19 @@
         type:
           type: string
           example: S002
+  # Students       
+    ImportStudentsResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties:
+        data:           
+          $ref: ../models/models.yml#/Student
+        code: 
+          type: integer   
+          example: 201
+        type:
+          type: string
+          example: S006

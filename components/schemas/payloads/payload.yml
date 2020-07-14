@@ -16,4 +16,12 @@
         concept: "191-418"       
         amount: 60.00
         description: "Pago Aportes Laboratorio"  
-  
+
+    StudentImportPayload: 
+      type: object
+      properties:
+        file: 
+          type: string
+          format: binary 
+        
+        
