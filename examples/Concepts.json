@@ -1,0 +1,54 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "concept": "191-418",       
+            "amount": 60.00,
+            "description": "Pago Aportes Laboratorio",
+            "created_at": "2020-04-16 07:35:08",
+            "updated_at": "2019-12-29T01:38:03 +05:00"
+          },
+          {
+            "id": 2,
+            "concept": "191-355",       
+            "amount": 100.00,
+            "description": "Pago Por Curso Calculo Diferencial e Integral I",
+            "created_at": "2020-04-16 07:35:08",
+            "updated_at": "2019-12-29T01:38:03 +05:00"
+          },
+          {
+            "id": 3,
+            "concept": "191-017",       
+            "amount": 21.00,
+            "description": "Pago 2da Repitencia",
+            "created_at": "2020-04-16 07:35:08",
+            "updated_at": "2019-12-29T01:38:03 +05:00"
+          },
+          {
+            "id": 4,
+            "concept": "194-451",       
+            "amount": 100.00,
+            "description": "Pago curso Calculo Diferencial e Integral II",
+            "created_at": "2020-04-16 07:35:08",
+            "updated_at": "2019-12-29T01:38:03 +05:00"
+          },
+          {
+            "id": 5,
+            "concept": "194-003",       
+            "amount": 36.00,
+            "description": "Pago Rectificación",
+            "created_at": "2020-04-16 07:35:08",
+            "updated_at": "2019-12-29T01:38:03 +05:00"
+          },
+          {
+            "id": 6,
+            "concept": "194-064",       
+            "amount": 100.00,
+            "description": "Pago Circuito Electrónicos I",
+            "created_at": "2020-04-16 07:35:08",
+            "updated_at": "2019-12-29T01:38:03 +05:00"
+          }
+            ],
+    "code": 200,
+    "type": "S002"
+}
