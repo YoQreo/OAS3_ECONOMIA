@@ -35,3 +35,36 @@
       example:
         id: 1
         description: "Pago Aportes Laboratorio"      
+      
+    Student:
+      type: object
+      properties:
+        id:
+          type: integer 
+        code:
+          type: string   
+        last_name:
+          type: string 
+        name: 
+          type: string
+        institutional_email:
+          type: string 
+        personal_email:
+          type: string 
+        phone_number:
+          type: string 
+        code_specialty: 
+          type: string 
+        total_debt: 
+          type: string 
+
+      example:
+        id: 1
+        code: 16200133
+        last_name: 'MATEO CARRASCO'
+        name: 'JOSE FRANCISCO'
+        institutional_email: 'jose.mateo3@unmsm.edu.pe'
+        personal_email: 'locutermo@gmail.com'
+        phone_number: '999999998'
+        code_specialty: '100'
+        total_debt: 0
