@@ -1,0 +1,16 @@
+{
+    "data":{
+        "id": 1,
+        "code": "16200133",
+        "last_name": "MATEO CARRASCO",
+        "name": "JOSE FRANCISCO",
+        "institutional_email": "jose.mateo3@unmsm.edu.pe",
+        "personal_email": "locutermo@gmail.com",
+        "phone_number": "999999998",
+        "code_specialty": 100,
+        "total_debt": 0
+    },
+    "code": 201,
+    "type": "S006"
+    
+}
