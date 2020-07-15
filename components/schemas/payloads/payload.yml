@@ -2,9 +2,7 @@
   #Este esquema contiene la estructura de un request body Concept
     ConceptPayload:
       type: object
-      properties:
-        id:
-          type: integer 
+      properties: 
         concept:
           type: string          
         amount:
@@ -12,7 +10,6 @@
         description:
           type: string 
       example:
-        id: 1
         concept: "191-418"       
         amount: 60.00
         description: "Pago Aportes Laboratorio"  
