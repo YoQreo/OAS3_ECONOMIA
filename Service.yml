@@ -14,6 +14,8 @@ tags:
     description: Everything about Concept
   - name: Student 
     description: Everything about Student 
+  - name: Schools 
+    description: Everything about Student 
         
 paths:
   #Modulo de Concepts
@@ -121,6 +123,19 @@ paths:
           $ref: components/responses/responses.yml#/Unauthenticated 
         '422':
           $ref: components/responses/responses.yml#/UnprocessableEntityImport 
+  /schools:
+     get:
+      tags:
+        - Schools    
+      summary: get All schools 
+      operationId: listConcepts
+      responses:            
+        '200':
+          $ref: components/responses/responses.yml#/ShowSchools                 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
 
 # Aplicar la API key globalmente a todas las operaciones 
 security:

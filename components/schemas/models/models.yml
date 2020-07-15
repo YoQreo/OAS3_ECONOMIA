@@ -34,7 +34,17 @@
           type: string   
       example:
         id: 1
-        description: "Pago Aportes Laboratorio"      
+        description: "Pago Aportes Laboratorio"    
+
+    School:  
+      type: object
+      properties:
+        id:
+          type: integer 
+        code:
+          type: string   
+        name:
+          type: string   
       
     Student:
       type: object

@@ -95,3 +95,19 @@
         type:
           type: string
           example: S006
+  # Schools 
+    ShowSchoolsResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties: 
+        data:
+          $ref: ../models/models.yml#/School
+        code:
+          type: integer
+          example: 200
+        type:
+          type: string
+          example: S002
