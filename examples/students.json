@@ -1,0 +1,45 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "code": "16200133",
+            "last_name": "MATEO CARRASCO",
+            "name": "JOSE FRANCISCO",
+            "institutional_email": "jose.mateo3@unmsm.edu.pe",
+            "personal_email": "locutermo@gmail.com",
+            "phone_number": "999999998",
+            "code_specialty": "100",
+            "total_debt": 0,
+            "created_at": "2020-04-16 07:35:08",
+            "updated_at": "2019-12-29T01:38:03 +05:00"
+          },
+          {
+            "id": 2,
+            "code": "16200131",
+            "last_name": "LEIVA EGOAVIL",
+            "name": "LIZBETH",
+            "institutional_email": "lizbeth.1@unmsm.edu.pe",
+            "personal_email": "lizbeth@gmail.com",
+            "phone_number": "999999996",
+            "code_specialty": "100",
+            "total_debt": 0,
+            "created_at": "2020-04-16 07:35:08",
+            "updated_at": "2019-12-29T01:38:03 +05:00"
+          },
+          {
+            "id": 3,
+            "code": "16200132",
+            "last_name": "LUQUE AYALA",
+            "name": "JUAN ALEXIS",
+            "institutional_email": "luque.1@unmsm.edu.pe",
+            "personal_email": "luque@gmail.com",
+            "phone_number": "999999997",
+            "code_specialty": "100",
+            "total_debt": 0,            
+            "created_at": "2020-04-16 07:35:08",
+            "updated_at": "2019-12-29T01:38:03 +05:00"
+          }
+        ],
+    "code": 200,
+    "type": "S002"
+}

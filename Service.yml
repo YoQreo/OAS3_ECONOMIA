@@ -101,6 +101,19 @@ paths:
           $ref: components/responses/responses.yml#/MethodNotAllowed           
         '401':
           $ref: components/responses/responses.yml#/Unauthenticated 
+  /students:
+    get:
+      tags:
+        - Student
+      summary: Get all students
+      operationId: indexStudents
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowStudents                 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
 
   /students/import:
     post:

@@ -20,5 +20,6 @@
         file: 
           type: string
           format: binary 
-        
+        code_specialty:
+          type: string 
         

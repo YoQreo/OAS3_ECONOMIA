@@ -74,6 +74,14 @@
             $ref: ../schemas/responses/successful.yml#/ImportStudentsResponse
           example:
             $ref: ../../examples/ImportStudents.json                                                            
+    ShowStudents: 
+        description: Show all students
+        content:
+          application/json:
+            schema:
+              $ref: ../schemas/responses/successful.yml#/ShowStudentssResponse                                                   
+            example: 
+              $ref: ../../examples/students.json   
 
     UnprocessableEntityImport:
       description: The request was well-formed but was unable to be followed due to semantic errors
@@ -108,4 +116,5 @@
           schema:
             $ref: ../schemas/responses/successful.yml#/ShowConceptsResponse                                                   
           example: 
-            $ref: ../../examples/Schools.json      
+            $ref: ../../examples/Schools.json            
+   
