@@ -70,7 +70,7 @@
 
       example:
         id: 1
-        code: 16200133
+        code: "16200133"
         last_name: 'MATEO CARRASCO'
         name: 'JOSE FRANCISCO'
         institutional_email: 'jose.mateo3@unmsm.edu.pe'
@@ -78,3 +78,20 @@
         phone_number: '999999998'
         code_specialty: '100'
         total_debt: 0
+
+
+    Enrollment:
+      type: object
+      properties:
+        id:
+          type: integer 
+        code_semester:
+          type: string   
+        code_student:
+          type: string 
+
+      example:
+        id: 1
+        code_semester: "2019-2"
+        code_student: "16200133"
+     

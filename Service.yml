@@ -15,7 +15,9 @@ tags:
   - name: Student 
     description: Everything about Student 
   - name: Schools 
-    description: Everything about Student 
+    description: Everything about Schools
+  - name: Enrollment
+    description: Everything about Enrollment
         
 paths:
   #Modulo de Concepts
@@ -141,7 +143,7 @@ paths:
       tags:
         - Schools    
       summary: get All schools 
-      operationId: listConcepts
+      operationId: indexSchools
       responses:            
         '200':
           $ref: components/responses/responses.yml#/ShowSchools                 
@@ -149,6 +151,30 @@ paths:
           $ref: components/responses/responses.yml#/MethodNotAllowed           
         '401':
           $ref: components/responses/responses.yml#/Unauthenticated 
+          
+  #enrollments
+
+  /enrollments/import:
+    post:
+      tags:
+        - Enrollment
+      summary: Import enrollment of students from xlsx file      
+      operationId: importEnrollments 
+      requestBody:
+        description: Import enrollment 
+        content:
+          multipart/form-data: 
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/EnrollmentImportPayload
+      responses:
+        '201':
+          $ref: components/responses/responses.yml#/ImportEnrollments         
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+        '422':
+          $ref: components/responses/responses.yml#/UnprocessableEntityImport 
 
 # Aplicar la API key globalmente a todas las operaciones 
 security:
