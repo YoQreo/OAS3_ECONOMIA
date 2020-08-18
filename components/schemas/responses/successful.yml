@@ -96,7 +96,7 @@
           type: string
           example: S006
     
-    ShowStudentssResponse:
+    ShowStudentsResponse:
       type: object
       required:
         - data
@@ -127,3 +127,20 @@
         type:
           type: string
           example: S002
+  #Enrollments
+
+    ImportEnrollmentsResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties:
+        data:           
+          $ref: ../models/models.yml#/Enrollment
+        code: 
+          type: integer   
+          example: 201
+        type:
+          type: string
+          example: S006

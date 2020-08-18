@@ -22,4 +22,12 @@
           format: binary 
         code_specialty:
           type: string 
-        
+          
+    EnrollmentImportPayload:
+        type: object
+        properties:
+          file: 
+            type: string
+            format: binary 
+          code_specialty:
+            type: string 

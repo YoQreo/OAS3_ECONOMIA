@@ -73,13 +73,14 @@
           schema: 
             $ref: ../schemas/responses/successful.yml#/ImportStudentsResponse
           example:
-            $ref: ../../examples/ImportStudents.json                                                            
+            $ref: ../../examples/ImportStudents.json     
+
     ShowStudents: 
         description: Show all students
         content:
           application/json:
             schema:
-              $ref: ../schemas/responses/successful.yml#/ShowStudentssResponse                                                   
+              $ref: ../schemas/responses/successful.yml#/ShowStudentsResponse                                                   
             example: 
               $ref: ../../examples/students.json   
 
@@ -116,5 +117,16 @@
           schema:
             $ref: ../schemas/responses/successful.yml#/ShowConceptsResponse                                                   
           example: 
-            $ref: ../../examples/Schools.json            
-   
+            $ref: ../../examples/Schools.json  
+    #Enrollment 
+    
+    ImportEnrollments: 
+      description: Enrollment records have been imported correctly
+      content:
+        application/json:
+          schema: 
+            $ref: ../schemas/responses/successful.yml#/ImportEnrollmentsResponse
+          example:
+            $ref: ../../examples/ImportEnrollments.json
+
+    
