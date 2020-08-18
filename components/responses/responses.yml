@@ -73,7 +73,16 @@
           schema: 
             $ref: ../schemas/responses/successful.yml#/ImportStudentsResponse
           example:
-            $ref: ../../examples/ImportStudents.json                                                            
+            $ref: ../../examples/ImportStudents.json     
+
+    ShowStudents: 
+        description: Show all students
+        content:
+          application/json:
+            schema:
+              $ref: ../schemas/responses/successful.yml#/ShowStudentsResponse                                                   
+            example: 
+              $ref: ../../examples/students.json   
 
     UnprocessableEntityImport:
       description: The request was well-formed but was unable to be followed due to semantic errors
@@ -100,4 +109,24 @@
               type:
                 type: string
                 example: E001
-          
+    # Schools 
+    ShowSchools: 
+      description: Show all Schools
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowConceptsResponse                                                   
+          example: 
+            $ref: ../../examples/Schools.json  
+    #Enrollment 
+    
+    ImportEnrollments: 
+      description: Enrollment records have been imported correctly
+      content:
+        application/json:
+          schema: 
+            $ref: ../schemas/responses/successful.yml#/ImportEnrollmentsResponse
+          example:
+            $ref: ../../examples/ImportEnrollments.json
+
+    
